@@ -66,7 +66,7 @@ int main()
     else
     {
         printf("Invalid Selection. Please try again...");
-        getch();
+        getchar();
         goto start_here;
     }
     char again;
@@ -163,7 +163,7 @@ int pvnrt()
       goto measure_unknown;
    }
 
-   getch();
+   getchar();
    return 0;
 }
 
@@ -181,7 +181,7 @@ int pvk()
           "\n\t Pressure    P1 = %f Pa"
           "\n\t Volume      V1 = %f m3"
           "\n\t Temperature T1 = %f K ",P1,V1,T1);
-   getch();
+   getchar();
    unknown:
    printf("\n\n\tPlease Select Unknown Value:");
    printf  ("\n\t+-+----------------- +"
@@ -219,10 +219,10 @@ int pvk()
    else
    {
       printf("Invalid Input. Please Try Again...");
-      getch();
+      getchar();
       goto unknown;
    }
-   getch();
+   getchar();
    return 0;
 
 }
@@ -283,7 +283,7 @@ int pvgammak()
       else
       {
         printf("Invalid Selection. Try Again...");
-        getch();
+        getchar();
         goto selection;
       }
    }
@@ -310,7 +310,7 @@ int pvgammak()
       else
       {
         printf("Invalid Selection. Try Again...");
-        getch();
+        getchar();
         goto selection;
       }
    }
@@ -337,17 +337,17 @@ int pvgammak()
       else
       {
         printf("Invalid Selection. Try Again...");
-        getch();
+        getchar();
         goto selection;
       }
    }
    else
    {
       printf("Invalid Selection. Try Again...");
-      getch();
+      getchar();
       goto selection;
    }
-   getch();
+   getchar();
    return 0;
 
 }
@@ -369,10 +369,10 @@ int wis()
               "\nTemperature,    T  = %f K  "
               "\nInitial Volume, V1 = %f m3 "
               "\nFinal Volume,   V2 = %f m3 ",n,T,V1,V2);
-   getch();
+   getchar();
    W=n*R*T*log(V2/V1);
    printf("\n\n\tThe Calculated Work Done is %f Joule",W);
-   getch();
+   getchar();
    return 0;
 }
 
@@ -405,10 +405,10 @@ int wad()
               "\nInitial Volume,   V1 = %f m3 "
               "\nFinal Pressure,   P2 = %f Pa "
               "\nFinal Volume,     V2 = %f m3 ",g,P1,V1,P2,V2);
-        getch();
+        getchar();
         W=(1/(g-1))*((P1*V1)-(P2*V2));
         printf("\n\n\tThe Calculated Work Done is %f Joule",W);
-        getch();
+        getchar();
         return 0;
    }
    else if(sel==2)
@@ -425,10 +425,10 @@ int wad()
               "\nAmount,              n  = %f mol"
               "\nInitial Temperature, T1 = %f K  "
               "\nFinal Temperature,   T2 = %f K  ",g,n,T1,T2);
-        getch();
+        getchar();
         W=((n*R)/(g-1))*(T1-T2);
         printf("\n\n\tThe Calculated Work Done is %f Joule",W);
-        getch();
+        getchar();
         return 0;
    }
    else
@@ -452,10 +452,10 @@ int wpdv()
                "\nPressure,       P  = %f Pa "
                "\nInitial Volume, V1 = %f m3 "
                "\nFinal Volume,   V2 = %f m3 ",P,V1,V2);
-    getch();
+    getchar();
     W=P*(V2-V1);
     printf("\n\n\tThe Calculated Work Done is %f Joule",W);
-    getch();
+    getchar();
     return 0;
 
 }
@@ -490,10 +490,10 @@ int entropy()
     else
     {
         printf("\n\n\tInvalid Input. Please try again...");
-        getch();
+        getchar();
         goto selection;
     }
-    getch();
+    getchar();
     return 0;
 }
 
@@ -525,7 +525,7 @@ int tempchange()
                    "\n\t+---+---------------------"
                    "\n\t| X | %f unit"
                    "\n\t+---+---------------------\n",tc,tf,tk,x);
-          getch();
+          getchar();
           return 0;
     }
     else if(sel==2)
@@ -543,13 +543,13 @@ int tempchange()
                    "\n\t+---+---------------------"
                    "\n\t| K | %f "
                    "\n\t+---+---------------------",x,tc,tf,tk);
-          getch();
+          getchar();
           return 0;
     }
     else
     {
           printf("\n\n\tInvalid Selection. Please Try Again...");
-          getch();
+          getchar();
           goto selection; 
     }
 }
@@ -588,7 +588,7 @@ int efficiency()
         else
         {
             printf("\n\nInvalid Input. Please Try Again...");
-            getch();
+            getchar();
             goto select_th;
         }
     }
@@ -603,11 +603,11 @@ int efficiency()
     else
     {
         printf("Invalid Input. Please Try Again...");
-        getch();
+        getchar();
         goto iscarnot;
     }
     printf("\n\n\tThe Calculated Efficiency is %f which is %f%%",eff,eff*100);
-    getch();
+    getchar();
     return 0;
 }
 
@@ -645,11 +645,11 @@ int cop()
     else
     {
         printf("Invalid Input. Please try again...");
-        getch();
+        getchar();
         goto select;
     }
     printf("\n\n\tThe Calculated Coefficient of Performance (COP) is %f",cop);
-    getch();
+    getchar();
     return 0;
 }
 
@@ -768,7 +768,7 @@ float dq()
     scanf("%f",&lat);
     dq=mass*lat;
     printf("\nThe change in Heat Energy is %f Joule",dq);
-    getch();
+    getchar();
     return dq;
 }
 
